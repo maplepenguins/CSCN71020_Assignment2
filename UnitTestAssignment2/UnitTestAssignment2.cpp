@@ -40,7 +40,7 @@ namespace UnitTestAssignment2
 			int length = 0;
 			int input = -10;
 			setLength(input, &length);
-			Assert::AreEqual(input, length);
+			Assert::AreNotEqual(input, length);
 
 		}
 
@@ -84,7 +84,7 @@ namespace UnitTestAssignment2
 			int width = 0;
 			int input = 432;
 			setWidth(input, &width);
-			Assert::AreEqual(input, width);
+			Assert::AreNotEqual(input, width);
 		}
 	};
 }
