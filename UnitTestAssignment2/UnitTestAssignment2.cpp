@@ -44,16 +44,16 @@ namespace UnitTestAssignment2
 
 		}
 
-		TEST_METHOD(TestSetLengthPostiveIntegerGreaterThan100)
-		{	//testing set length >=100 input from user
+		TEST_METHOD(TestSetLengthMaxValue)
+		{	//testing set length to max value
 			int length = 0;
-			int input = 100;
+			int input = 99;
 			setLength(input, &length);
 			Assert::AreEqual(input, length);
 
 		}
 		
-		TEST_METHOD(TestSetLengthPositiveIntegerLessThan100)
+		TEST_METHOD(TestSetLengthValidInput)
 		{ //testing set length between 0-100 (valid input)
 
 			int length = 0;
@@ -61,6 +61,30 @@ namespace UnitTestAssignment2
 			setLength(input, &length);
 			Assert::AreEqual(input, length);
 		
+		}
+
+		TEST_METHOD(TestSetWidthValidInput) 
+		{ // Test set width to 22
+			int width = 0;
+			int input = 22;
+			setWidth(input, &width);
+			Assert::AreEqual(input, width);
+		}
+
+		TEST_METHOD(TestSetWidthZero)
+		{ // Test set width to 0
+			int width = 0;
+			int input = 0;
+			setWidth(input, &width);
+			Assert::AreEqual(input, width);
+		}
+
+		TEST_METHOD(TestSetWidthAboveMax)
+		{//Test set width to above max 99
+			int width = 0;
+			int input = 432;
+			setWidth(input, &width);
+			Assert::AreEqual(input, width);
 		}
 	};
 }
